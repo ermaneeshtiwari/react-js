@@ -1,27 +1,96 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
+/**
+ * Header
+ *  -Logo
+ *  -Menu Nav
+ * Body
+ *  -Search
+ *  -Reasto Container
+ *      - Resto cart
+ * Footer
+ *  -Copy Right  
+ *  - Links
+ *  - Address
+ *  - Contact
+ */
 
-// const parent = React.createElement('div', {id:"parent"} ,[
-//     React.createElement('div', {id:"child1"}, [
-//         React.createElement('h1', {}, 'This 1 child h1'), 
-//         React.createElement('h2', {}, 'This 1 child h2')
-//     ]),
-//     React.createElement('div', {id:"child2"}, [
-//         React.createElement('h1', {}, 'This 2 child h1'),
-//         React.createElement('h2', {}, 'This 2 child h2')
-//     ])
-// ]);
-// const parent = (<h1 id='heading'>
-//     This is parent
-//         </h1>);
-const TitleComponent = () => {
-    return <h1>This is Title</h1>;
+const Header = () => {
+    return(
+    <div className="header">
+        <div className="logo"><img alt="logo" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"></img></div>
+        <div className="navitem">
+            <ul className="menu">
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Cart</li>
+            </ul>
+        </div>
+    </div>
+    )
 }
 
-const HeadingComponet = () => (<div id="container">
-    <TitleComponent />
-    <div className="heading">This is Heading compnent</div>
-    </div>);
+const Search = () => {
+   return(
+    <div className="search-bar">
+        <input type="text" className="search-name" name="search" placeholder="Search your foods"></input>
+        <input type="button" className="search-submit" name="submit" value="Submit"></input>
+    </div>
+   ) 
+}
+
+const RestorentCart = () => {
+    return(<div className="rest-cart">
+        <div className="cartImage">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/thkxegsxq5gvoe3pcxoi" alt="cart"></img>
+        </div>
+        <div className="cartName"><h3>Khana khaoo</h3></div>
+        <div className="item-list">Pizza, Indian</div>
+        <div className="cartRating"><p>4.3</p></div>
+        <div className="cartTime"><p>30 mins</p></div>
+    </div>)
+}
+const Body =() => {
+    return(
+        <div className="restor-container">
+            <div className="searchform"><Search /></div>
+            <div className="resto-list">
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+                <RestorentCart />
+            </div>
+        </div>
+    )
+}
+
+const AppLayout = () => {
+    return(
+        <div className="app">
+            <Header />
+            <Body />
+        </div>
+    );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<HeadingComponet />);
+root.render(<AppLayout />);

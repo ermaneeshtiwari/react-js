@@ -1,1 +1,14 @@
-.heading {color: red;}
+.header {display: flex; justify-content: space-between; border: 1px solid #000;}
+.logo img {width: 200px;}
+.navitem {padding:20px; font-size: 20px;}
+.navitem .menu {display: flex;}
+.navitem .menu li {list-style:none; margin: 5px; padding: 5px;}
+
+.search-bar {display: flex; flex-wrap: wrap; justify-content: center; padding: 20px 0px; margin: auto;}
+.search-name { margin: 10px 0px; font-size: 20px; }
+.search-submit { margin: 10px; padding: 10px; font-size: 20px;}
+
+.resto-list {display: flex; flex-wrap: wrap; } 
+.cartImage img {width: 100%;}
+.rest-cart {margin: 5px; padding: 5px; background-color: #cccccc26; width: 260px;}
+.rest-cart:hover{ background-color: #d7d6d6; cursor: pointer;}
