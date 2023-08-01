@@ -10,6 +10,6 @@
 
 .resto-list {display: flex; flex-wrap: wrap; } 
 .cartImage img {width: 100%; height: 250px;     border-radius: 16px; overflow: hidden;}
-.rest-cart {margin: 5px; padding: 5px; background-color: #cccccc26; width: 260px;}
+.rest-cart {margin: 5px; padding: 5px; background-color: #cccccc26; width: 280px;}
 .rest-cart:hover{ background-color: #d7d6d6; cursor: pointer;}
 .filter-btn-round {margin: 20px; padding: 10px; border-radius: 16px; cursor: pointer;}
